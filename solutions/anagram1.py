@@ -20,7 +20,8 @@ import csv
 import sys
 
 # https://www.geeksforgeeks.org/python-sorted-check-two-strings-anagram-not/
-
+# This is not great design; should call sys.exit only from a main function, so would
+# probably define anagram in a helper func that returns to main, then main sys.exits
 if len(sys.argv) != 3:
      sys.exit("Usage: python anagram.py word1 word2")
 
